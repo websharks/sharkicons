@@ -41,3 +41,6 @@
 .wsi-comment-mail:before {
   content: "\e000";
 }
+.wsi-comment-mail-one:before {
+  content: "\e001";
+}
