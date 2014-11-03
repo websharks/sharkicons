@@ -1,4 +1,3 @@
-ws-font-icons
-=============
+## WebSharks™ Icon Font
 
-WebSharks Font Icons
+This is a font containing logos/icons associated w/ WebSharks, Inc.
