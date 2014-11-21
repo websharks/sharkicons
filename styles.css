@@ -59,3 +59,7 @@ Begin icon definitions.
 	position : relative;
 	top      : .2em;
 }
+.wsi-zencache:before
+{
+	content : '\e002';
+}
