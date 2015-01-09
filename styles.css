@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*
 Icon font face.
 */
@@ -67,4 +66,8 @@ Begin icon definitions.
 .wsi-zencache-logo::before
 {
 	content : '\e003';
+}
+.wsi-wp-kb-articles::before
+{
+	content : '\e004';
 }
