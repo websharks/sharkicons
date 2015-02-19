@@ -71,3 +71,7 @@ Begin icon definitions.
 {
 	content : '\e004';
 }
+.wsi-s2member::before
+{
+	content : '\e005';
+}
