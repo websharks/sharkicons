@@ -25,12 +25,5 @@
     "support": {
         "source": "https://github.com/websharks/sharkicons",
         "issues": "https://github.com/websharks/sharkicons/issues"
-    },
-
-    "archive": {
-        "exclude": [
-            "/assets",
-            "/tests"
-        ]
     }
 }
