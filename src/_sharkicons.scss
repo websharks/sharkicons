@@ -1,0 +1,59 @@
+// UTF-8 icon map.
+$sharkicons: (
+  comment-mail:               '\e000',
+  comment-mail-one:           '\e001',
+  zencache:                   '\e002',
+  zencache-logo:              '\e003',
+  wp-kb-articles:             '\e004',
+  s2member:                   '\e005',
+  logo:                       '\e006',
+  sharks:                     '\e008',
+  broom:                      '\e02b',
+);
+
+// Font family.
+@mixin sharkicons-font($dir: '') {
+  @at-root {
+    @font-face {
+      font-family:            sharkicons;
+      src:                    url($dir + 'fonts/sharkicons.eot?htqeeg');
+      src:                    url($dir + 'fonts/sharkicons.eot?#iefixhtqeeg') format('embedded-opentype'), url('fonts/sharkicons.ttf?htqeeg') format('truetype'), url('fonts/sharkicons.woff?htqeeg') format('woff'), url('fonts/sharkicons.svg?htqeeg#sharkicons') format('svg');
+      font-weight:            normal;
+      font-style:             normal;
+    }
+  }
+}
+
+// Font family style.
+@mixin sharkicon-font-styles {
+  font:                       normal normal normal 14px/1 sharkicons;
+  text-rendering:             optimizeLegibility;
+  -webkit-font-smoothing:     antialiased;
+  font-smoothing:             antialiased;
+  display:                    inline-block;
+  font-size:                  inherit;
+  text-decoration:            inherit;
+  text-transform:             none;
+}
+
+// Markup classes.
+@mixin sharkicon-classes {
+  .sharkicon::before {
+    @include sharkicon-font-styles;
+  }
+
+  @each $-key, $-value in $sharkicons {
+    .sharkicon-#{$-key}::before {
+      content:                $-value;
+    }
+  }
+}
+
+// Make an icon out of any element.
+@mixin sharkicon($icon, $position: before) {
+  &::#{$position} {
+    @include sharkicon-font-styles;
+
+    content:                  map-get($sharkicons, $icon);
+  }
+}
