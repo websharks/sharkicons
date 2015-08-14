@@ -96,7 +96,7 @@ Equivalent to:
 
 ```css
 .my-product .my-icon::before {
-  content:                    '\e004';
+  content:                    '\e000';
   font:                       normal normal normal 14px/1 sharkicons;
   text-rendering:             optimizeLegibility;
   -webkit-font-smoothing:     antialiased;
@@ -124,7 +124,7 @@ Equivalent to:
 
 ```css
 .my-product .my-icon::after {
-  content:                    '\e004';
+  content:                    '\e000';
   font:                       normal normal normal 14px/1 sharkicons;
   text-rendering:             optimizeLegibility;
   -webkit-font-smoothing:     antialiased;
@@ -133,5 +133,15 @@ Equivalent to:
   font-size:                  inherit;
   text-decoration:            inherit;
   text-transform:             none;
+}
+```
+
+---
+
+## Mapping An Icon Char via SCSS
+
+```scss
+.my-product .my-icon:hover::after {
+  content:                    map-get($sharkicons, broom);
 }
 ```
