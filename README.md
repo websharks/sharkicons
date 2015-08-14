@@ -1,6 +1,6 @@
 ## WebSharks™ Icon Font (Sharkicons)
 
-Font containing WebSharks logos/icons.
+Font containing WebSharks logos/icons, FontAwesome, and more! See: [**DEMO**](http://websharks.github.io/sharkicons/demo.html)
 
 [![](https://img.shields.io/github/license/websharks/sharkicons.svg)](https://github.com/websharks/sharkicons/blob/HEAD/LICENSE.txt)
 [![](https://img.shields.io/badge/made-w%2F_100%25_pure_awesome_sauce-AB815F.svg?label=made)](http://websharks-inc.com/)
