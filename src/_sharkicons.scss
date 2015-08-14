@@ -1,15 +1,5 @@
-// UTF-8 icon map.
-$sharkicons: (
-  comment-mail:               '\e000',
-  comment-mail-one:           '\e001',
-  zencache:                   '\e002',
-  zencache-logo:              '\e003',
-  wp-kb-articles:             '\e004',
-  s2member:                   '\e005',
-  logo:                       '\e006',
-  sharks:                     '\e008',
-  broom:                      '\e02b',
-);
+// UTF-8 map.
+@import 'map';
 
 // Font family.
 @mixin sharkicons-font($dir: '') {
