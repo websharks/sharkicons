@@ -56,6 +56,19 @@
   }
 }
 
+// Custom markup classes.
+@mixin sharkicon-custom-classes($prefix) {
+  .#{$prefix}::before {
+    @include sharkicon-font-styles;
+  }
+
+  @each $-key, $-value in $sharkicons {
+    .#{$prefix}-#{$-key}::before {
+      content:                $-value;
+    }
+  }
+}
+
 // Make an icon out of any element.
 @mixin sharkicon($icon, $position: before) {
   &::#{$position} {

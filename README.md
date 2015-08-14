@@ -68,6 +68,17 @@ _Contains over 750 icons. Total file size: 212kb (compare to stand-alone FontAwe
 
 ---
 
+## Custom Classes via SCSS (`prefix` instead of `si`)
+
+```scss
+@import '/path/to/sharkicons/src/sharkicons';
+@include sharkicons-font('/path/to/sharkicons/src');
+
+@include sharkicon-custom-classes(prefix);
+```
+
+---
+
 ## Creating an Icon via SCSS
 
 _Note: you can do this without including the `sharkicon-[long|short]-classes` if you like._
