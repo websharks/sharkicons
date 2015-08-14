@@ -45,26 +45,39 @@ _Contains over 750 icons. Total file size: 212kb (compare to stand-alone FontAwe
 
 ---
 
-## Importing/Including Icons via SCSS
+## Including Classes via SCSS
 
 ```scss
 @import '/path/to/sharkicons/src/sharkicons';
 @include sharkicons-font('/path/to/sharkicons/src');
-@include sharkicon-classes;
+@include sharkicon-short-classes;
+```
+
+---
+
+## Scoping Classes via SCSS
+
+```scss
+@import '/path/to/sharkicons/src/sharkicons';
+@include sharkicons-font('/path/to/sharkicons/src');
+
+.my-product {
+  @include sharkicon-short-classes;
+}
 ```
 
 ---
 
 ## Creating an Icon via SCSS
 
-_Note: you can do this without including the `sharkicon-classes` if you like._
+_Note: you can do this without including the `sharkicon-[long|short]-classes` if you like._
 
 ```scss
 @import '/path/to/sharkicons/src/sharkicons';
 @include sharkicons-font('/path/to/sharkicons/src');
-// @include sharkicon-classes;
+// @include sharkicon-short-classes;
 
-.my-class {
+.my-product .my-icon {
   @include sharkicon(broom);
 }
 ```
@@ -72,7 +85,7 @@ _Note: you can do this without including the `sharkicon-classes` if you like._
 Equivalent to:
 
 ```css
-.my-class::before {
+.my-product .my-icon::before {
   content:                    '\e004';
   font:                       normal normal normal 14px/1 sharkicons;
   text-rendering:             optimizeLegibility;
@@ -90,9 +103,9 @@ Alternatively, you can pass a second argument to `sharkicon()` to set the before
 ```scss
 @import '/path/to/sharkicons/src/sharkicons';
 @include sharkicons-font('/path/to/sharkicons/src');
-// @include sharkicon-classes;
+// @include sharkicon-short-classes;
 
-.my-class {
+.my-product .my-icon {
   @include sharkicon(broom, after);
 }
 ```
@@ -100,7 +113,7 @@ Alternatively, you can pass a second argument to `sharkicon()` to set the before
 Equivalent to:
 
 ```css
-.my-class::after {
+.my-product .my-icon::after {
   content:                    '\e004';
   font:                       normal normal normal 14px/1 sharkicons;
   text-rendering:             optimizeLegibility;
