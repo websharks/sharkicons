@@ -2,7 +2,7 @@
 
 Font containing WebSharks logos/icons + many others; including FontAwesome! See: [**DEMO**](http://websharks.github.io/sharkicons/demo.html)
 
-_Contains over 900 icons. Total file size: `212kb` (compare to stand-alone FontAwesome @ 136kb)._
+_Contains over 900 icons. Total file size: 212kb (compare to stand-alone FontAwesome @ 136kb)._
 
 [![](https://img.shields.io/github/license/websharks/sharkicons.svg)](https://github.com/websharks/sharkicons/blob/HEAD/LICENSE.txt)
 [![](https://img.shields.io/badge/made-w%2F_100%25_pure_awesome_sauce-AB815F.svg?label=made)](http://websharks-inc.com/)
