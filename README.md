@@ -1,4 +1,4 @@
-## WebSharks™ Icon Font
+## WebSharks™ Icon Font (Sharkicons)
 
 Font containing WebSharks logos/icons.
 
@@ -12,3 +12,91 @@ Font containing WebSharks logos/icons.
 [![](https://img.shields.io/github/stars/websharks/sharkicons.svg?label=stars)](https://github.com/websharks/sharkicons/stargazers)
 [![](https://img.shields.io/github/downloads/websharks/sharkicons/latest/total.svg?label=downloads)](https://github.com/websharks/sharkicons/releases)
 [![](https://img.shields.io/packagist/dt/websharks/sharkicons.svg?label=packagist)](https://packagist.org/packages/websharks/sharkicons)
+
+---
+
+## Using Icons in HTML Markup
+
+Include the Sharkicon CSS classes.
+
+```html
+<link rel="stylesheet" type="text/css" href="/path/to/sharkicons/src/classes.min.css" />
+```
+
+Construct an icon via HTML markup w/ this syntax.
+
+```html
+<i class="sharkicon sharkicon-websharks"></i>
+```
+
+i.e., `<i class="sharkicon sharkicon-[icon]"></i>`
+
+---
+
+## Importing/Including Icons via SCSS
+
+```scss
+@import '/path/to/sharkicons/src/sharkicons';
+@include sharkicons-font('/path/to/sharkicons/src');
+@include sharkicon-classes;
+```
+
+---
+
+## Creating an Icon via SCSS
+
+_Note: you can do this without including the `sharkicon-classes` if you like._
+
+```scss
+@import '/path/to/sharkicons/src/sharkicons';
+@include sharkicons-font('/path/to/sharkicons/src');
+// @include sharkicon-classes;
+
+.my-class {
+  @include sharkicon(websharks);
+}
+```
+
+Equivalent to:
+
+```css
+.my-class::before {
+  content:                    '\e004';
+  font:                       normal normal normal 14px/1 sharkicons;
+  text-rendering:             optimizeLegibility;
+  -webkit-font-smoothing:     antialiased;
+  font-smoothing:             antialiased;
+  display:                    inline-block;
+  font-size:                  inherit;
+  text-decoration:            inherit;
+  text-transform:             none;
+}
+```
+
+Alternatively, you can pass a second argument to `sharkicon()` to set the before/after specification. The default value is `before`. You might want to change it to `after` in some special case.
+
+```scss
+@import '/path/to/sharkicons/src/sharkicons';
+@include sharkicons-font('/path/to/sharkicons/src');
+// @include sharkicon-classes;
+
+.my-class {
+  @include sharkicon(websharks, after);
+}
+```
+
+Equivalent to:
+
+```css
+.my-class::after {
+  content:                    '\e004';
+  font:                       normal normal normal 14px/1 sharkicons;
+  text-rendering:             optimizeLegibility;
+  -webkit-font-smoothing:     antialiased;
+  font-smoothing:             antialiased;
+  display:                    inline-block;
+  font-size:                  inherit;
+  text-decoration:            inherit;
+  text-transform:             none;
+}
+```
