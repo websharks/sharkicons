@@ -23,28 +23,24 @@ _Contains over 750 icons. Total file size: 212kb (compare to stand-alone FontAwe
 
 ## Using Icons in HTML Markup
 
-Include the Sharkicon CSS classes (long or short).
-
 ```html
 <link rel="stylesheet" type="text/css" href="/path/to/sharkicons/src/long-classes.min.css" />
 ```
 
-Construct an icon via HTML markup w/ this syntax.
-
 ```html
-<i class="sharkicon sharkicon-websharks"></i>
+<i class="sharkicon sharkicon-broom"></i>
 ```
 
-i.e., `<i class="sharkicon sharkicon-[icon]"></i>`
+---
 
-### Short Classes (Less Markup; i.e., `.si-` vs. `.sharkicon-`)
+## Short Classes (Less Markup; `si-` instead of `sharkicon-`)
 
 ```html
 <link rel="stylesheet" type="text/css" href="/path/to/sharkicons/src/short-classes.min.css" />
 ```
 
 ```html
-<i class="si si-websharks"></i>
+<i class="si si-broom"></i>
 ```
 
 ---
@@ -69,7 +65,7 @@ _Note: you can do this without including the `sharkicon-classes` if you like._
 // @include sharkicon-classes;
 
 .my-class {
-  @include sharkicon(websharks);
+  @include sharkicon(broom);
 }
 ```
 
@@ -97,7 +93,7 @@ Alternatively, you can pass a second argument to `sharkicon()` to set the before
 // @include sharkicon-classes;
 
 .my-class {
-  @include sharkicon(websharks, after);
+  @include sharkicon(broom, after);
 }
 ```
 
