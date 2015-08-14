@@ -33,7 +33,7 @@ _Contains over 750 icons. Total file size: 212kb (compare to stand-alone FontAwe
 
 ---
 
-## Short Classes (Less Markup; `si-` instead of `sharkicon-`)
+## Short Classes (`si-` instead of `sharkicon-`)
 
 ```html
 <link rel="stylesheet" type="text/css" href="/path/to/sharkicons/src/short-classes.min.css" />
