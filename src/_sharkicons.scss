@@ -30,14 +30,27 @@
   text-transform:             none;
 }
 
-// Markup classes.
-@mixin sharkicon-classes {
+// Long markup classes.
+@mixin sharkicon-long-classes {
   .sharkicon::before {
     @include sharkicon-font-styles;
   }
 
   @each $-key, $-value in $sharkicons {
     .sharkicon-#{$-key}::before {
+      content:                $-value;
+    }
+  }
+}
+
+// Short markup classes.
+@mixin sharkicon-short-classes {
+  .si::before {
+    @include sharkicon-font-styles;
+  }
+
+  @each $-key, $-value in $sharkicons {
+    .si-#{$-key}::before {
       content:                $-value;
     }
   }

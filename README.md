@@ -23,10 +23,10 @@ _Contains over 750 icons. Total file size: 212kb (compare to stand-alone FontAwe
 
 ## Using Icons in HTML Markup
 
-Include the Sharkicon CSS classes.
+Include the Sharkicon CSS classes (long or short).
 
 ```html
-<link rel="stylesheet" type="text/css" href="/path/to/sharkicons/src/classes.min.css" />
+<link rel="stylesheet" type="text/css" href="/path/to/sharkicons/src/long-classes.min.css" />
 ```
 
 Construct an icon via HTML markup w/ this syntax.
@@ -36,6 +36,16 @@ Construct an icon via HTML markup w/ this syntax.
 ```
 
 i.e., `<i class="sharkicon sharkicon-[icon]"></i>`
+
+### Short Classes (Less Markup; i.e., `.si-` vs. `.sharkicon-`)
+
+```html
+<link rel="stylesheet" type="text/css" href="/path/to/sharkicons/src/short-classes.min.css" />
+```
+
+```html
+<i class="si si-websharks"></i>
+```
 
 ---
 
