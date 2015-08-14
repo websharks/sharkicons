@@ -15,6 +15,10 @@ Font containing WebSharks logos/icons, FontAwesome, and more! See: [**DEMO**](ht
 
 ---
 
+<img src="assets/screenshot.png" align="center" alt="screenshot" />
+
+---
+
 ## Using Icons in HTML Markup
 
 Include the Sharkicon CSS classes.
