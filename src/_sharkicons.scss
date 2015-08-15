@@ -1,5 +1,4 @@
 @import 'map';
-@import 'vendor/package/bourbon/bourbon-v4.2.3/bourbon';
 
 // Font family.
 @mixin sharkicons-font($dir: '') {
@@ -10,8 +9,8 @@
   @at-root {
     @font-face {
       font-family:            sharkicons;
-      src:                    url($dir + 'fonts/sharkicons.eot?f0bmis');
-      src:                    url($dir + 'fonts/sharkicons.eot?#iefixf0bmis') format('embedded-opentype'), url($dir + 'fonts/sharkicons.ttf?f0bmis') format('truetype'), url($dir + 'fonts/sharkicons.woff?f0bmis') format('woff'), url($dir + 'fonts/sharkicons.svg?f0bmis#sharkicons') format('svg');
+      src:                    url($dir + 'fonts/sharkicons.eot');
+      src:                    url($dir + 'fonts/sharkicons.eot?#iefix') format('embedded-opentype'), url($dir + 'fonts/sharkicons.ttf') format('truetype'), url($dir + 'fonts/sharkicons.woff') format('woff'), url($dir + 'fonts/sharkicons.svg#sharkicons') format('svg');
       font-weight:            normal;
       font-style:             normal;
     }

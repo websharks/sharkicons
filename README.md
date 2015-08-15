@@ -47,7 +47,10 @@ _Contains over 750 icons. Total file size: 212kb (compare to stand-alone FontAwe
 
 ## Including Classes via SCSS
 
+_**Note:** Bourbon is a required dependency. See: <http://bourbon.io/> for details._
+
 ```scss
+@import '/path/to/bourbon';
 @import '/path/to/sharkicons/src/sharkicons';
 @include sharkicons-font('/path/to/sharkicons/src');
 @include sharkicon-short-classes;
@@ -58,6 +61,7 @@ _Contains over 750 icons. Total file size: 212kb (compare to stand-alone FontAwe
 ## Custom Classes via SCSS (`prefix` instead of `si`)
 
 ```scss
+@import '/path/to/bourbon';
 @import '/path/to/sharkicons/src/sharkicons';
 @include sharkicons-font('/path/to/sharkicons/src');
 @include sharkicon-custom-classes(prefix);
@@ -68,6 +72,7 @@ _Contains over 750 icons. Total file size: 212kb (compare to stand-alone FontAwe
 ## Scoping Classes via SCSS
 
 ```scss
+@import '/path/to/bourbon';
 @import '/path/to/sharkicons/src/sharkicons';
 @include sharkicons-font('/path/to/sharkicons/src');
 
@@ -83,6 +88,7 @@ _Contains over 750 icons. Total file size: 212kb (compare to stand-alone FontAwe
 _Note: you can do this without including the `sharkicon-[long|short]-classes` if you like._
 
 ```scss
+@import '/path/to/bourbon';
 @import '/path/to/sharkicons/src/sharkicons';
 @include sharkicons-font('/path/to/sharkicons/src');
 // @include sharkicon-short-classes;
@@ -111,6 +117,7 @@ Equivalent to:
 Alternatively, you can pass a second argument to `sharkicon()` to set the before/after specification. The default value is `before`. You might want to change it to `after` in some special case.
 
 ```scss
+@import '/path/to/bourbon';
 @import '/path/to/sharkicons/src/sharkicons';
 @include sharkicons-font('/path/to/sharkicons/src');
 // @include sharkicon-short-classes;
