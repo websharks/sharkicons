@@ -163,13 +163,15 @@
     }
   }
 
-  @include keyframes(#{$prefix}-animation-spin) {
-    0% {
-      @include transform(rotate(0deg));
-    }
+  @at-root {
+    @include keyframes(#{$prefix}-animation-spin) {
+      0% {
+        @include transform(rotate(0deg));
+      }
 
-    100% {
-      @include transform(rotate(359deg));
+      100% {
+        @include transform(rotate(359deg));
+      }
     }
   }
 }
