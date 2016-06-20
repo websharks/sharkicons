@@ -1,3 +1,4 @@
-## v15xxxx
+## v160620
 
-- Initial release.
+- Updating version using SCSS variable.
+- Adding FontAwesome as a separate library option, w/ separate utilities (mixins) in SCSS.

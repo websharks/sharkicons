@@ -1,8 +1,12 @@
 @import 'map';
 
 // Font family.
-@mixin sharkicons-font($dir: '') {
-  $ver: '160620';
+@mixin font-awesome-font($dir: '') {
+  $ver: '4.6.3';
+
+  @if $dir == '' {
+    $dir: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/' + $ver;
+  }
 
   @if $dir != '' {
     $dir: $dir + '/';
@@ -10,9 +14,9 @@
 
   @at-root {
     @font-face {
-      font-family:            sharkicons;
-      src:                    url($dir + 'fonts/sharkicons.eot?v=' + $ver);
-      src:                    url($dir + 'fonts/sharkicons.eot?v=' + $ver + '#iefix') format('embedded-opentype'), url($dir + 'fonts/sharkicons.ttf?v=' + $ver) format('truetype'), url($dir + 'fonts/sharkicons.woff?v=' + $ver) format('woff'), url($dir + 'fonts/sharkicons.svg?v=' + $ver + '#sharkicons') format('svg');
+      font-family:            FontAwesome;
+      src:                    url($dir + 'fonts/fontawesome-webfont.eot?v=' + $ver);
+      src:                    url($dir + 'fonts/fontawesome-webfont.eot?v=' + $ver + '#iefix') format('embedded-opentype'), url($dir + 'fonts/fontawesome-webfont.woff2?v=' + $ver) format('woff2'), url($dir + 'fonts/fontawesome-webfont.woff?v=' + $ver) format('woff'), url($dir + 'fonts/fontawesome-webfont.ttf?v=' + $ver) format('truetype'), url($dir + 'fonts/fontawesome-webfont.svg?v=' + $ver + '#fontawesomeregular') format('svg');
       font-weight:            normal;
       font-style:             normal;
     }
@@ -20,8 +24,8 @@
 }
 
 // Font family style.
-@mixin sharkicon-font-styles {
-  font:                       normal normal normal 14px/1 sharkicons;
+@mixin font-awesome-font-styles {
+  font:                       normal normal normal 14px/1 FontAwesome;
   text-rendering:             optimizeLegibility;
   -webkit-font-smoothing:     antialiased;
   font-smoothing:             antialiased;
@@ -32,12 +36,12 @@
 }
 
 // Markup classes.
-@mixin sharkicon-classes($prefix: sharkicon) {
+@mixin font-awesome-classes($prefix: font-awesome) {
   .#{$prefix}::before {
-    @include sharkicon-font-styles;
+    @include font-awesome-font-styles;
   }
 
-  @each $-key, $-value in $sharkicons {
+  @each $-key, $-value in $font-awesome-icons {
     .#{$prefix}-#{$-key}::before {
       content:                $-value;
     }
@@ -179,25 +183,25 @@
 }
 
 // Long markup classes.
-@mixin sharkicon-long-classes {
-  @include sharkicon-classes(sharkicon);
+@mixin font-awesome-long-classes {
+  @include font-awesome-classes(font-awesome);
 }
 
 // Short markup classes.
-@mixin sharkicon-short-classes {
-  @include sharkicon-classes(si);
+@mixin font-awesome-short-classes {
+  @include font-awesome-classes(fa);
 }
 
 // Custom markup classes.
-@mixin sharkicon-custom-classes($prefix) {
-  @include sharkicon-classes($prefix);
+@mixin font-awesome-custom-classes($prefix) {
+  @include font-awesome-classes($prefix);
 }
 
 // Make an icon out of any element.
-@mixin sharkicon($icon, $position: before) {
+@mixin font-awesome($icon, $position: before) {
   &::#{$position} {
-    @include sharkicon-font-styles;
+    @include font-awesome-font-styles;
 
-    content:                  map-get($sharkicons, $icon);
+    content:                  map-get($font-awesome-icons, $icon);
   }
 }

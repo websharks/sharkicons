@@ -1,14 +1,12 @@
 {
   "name": "websharks/sharkicons",
   "homepage": "https://github.com/websharks/sharkicons",
-  "description": "Font containing WebSharks logos/icons.",
-  "keywords": [
-    "websharks",
-    "wordpress",
-    "php"
-  ],
+  "description": "Font containing WebSharks logos/icons & more.",
+  "keywords": ["websharks", "icons"],
+
   "type": "library",
   "license": "GPL-3.0+",
+
   "authors": [{
     "name": "websharks",
     "homepage": "http://websharks-inc.com/",
@@ -22,6 +20,7 @@
     "homepage": "http://raam.org/",
     "role": "developer"
   }],
+
   "support": {
     "source": "https://github.com/websharks/sharkicons",
     "issues": "https://github.com/websharks/sharkicons/issues"
@@ -31,6 +30,8 @@
   "require-dev": {
     "package/bourbon": "4.2.3"
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
 
   "autoload": {
     "psr-4": {}
@@ -39,6 +40,7 @@
     "vendor-dir": "src/vendor",
     "preferred-install": "dist"
   },
+
   "repositories": [{
     "type": "package",
     "package": {
